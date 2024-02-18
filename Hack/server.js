@@ -83,9 +83,10 @@ exec(`python ${pythonFilePath} `+Name+' '+'#@ '+Author+' #@ '+ISBN, (error, stdo
     console.error(`stderr: ${stderr}`);
     return;
   }
+  
   res.writeHead(200, { 'Content-Type': 'text/html' });          
   res.end(`
-    
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Site List</title>
@@ -106,11 +107,15 @@ exec(`python ${pythonFilePath} `+Name+' '+'#@ '+Author+' #@ '+ISBN, (error, stdo
   
   <h1 style="background-color: #FFCC33;">Websites</h1>
   
+  <h style="font size: 2px;"> ${stdout}</h2>
       
-  <h2>    ${stdout}</h2>
+
      
  
-  <img src=https://seeklogo.com/images/G/George_Mason_Patriots-logo-5D994883C6-seeklogo.com.png> 
+  
+  </center>
+  <center>
+  <l2> <img src=https://seeklogo.com/images/G/George_Mason_Patriots-logo-5D994883C6-seeklogo.com.png>    </l2>
   </center>
 
 `);
